@@ -1,4 +1,4 @@
-name: Upload Website
+name: index.html
 
 on:
   push:
