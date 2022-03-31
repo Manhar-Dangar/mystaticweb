@@ -40,6 +40,5 @@ change the variable as according your secret variable
 | ------------- | ------------- | ------------- | ------------- | 
 | `AWS_S3_BUCKET` | Your AWS S3 Bucket. [More info here.](https://docs.aws.amazon.com/general/latest/gr/managing-aws-access-keys.html) | `secret env` | **Yes** | 
 | `DISTRIBUTION_ID` | Your AWS DISTRIBUTION D. [More info here.](https://docs.aws.amazon.com/general/latest/gr/managing-aws-access-keys.html) | `secret env` | **Yes** | 
-| `AWS_S3_BUCKET` | The name of the bucket you're syncing to. For example, `jarv.is` or `my-app-releases`. | `secret env` | **Yes** | 
 | `AWS_REGION` | The region where you created your bucket. Set to `us-east-1` by default. [Full list of regions here.](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/using-regions-availability-zones.html#concepts-available-regions) | `env` | **Yes** | 
 
