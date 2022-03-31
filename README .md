@@ -30,6 +30,5 @@ jobs:
            pwd
            aws s3 cp index.html "${{ secrets.AWS_S3_BUCKET }}"
 ```     
-              - 
 ## Configuration
 change the variable as according your variable
