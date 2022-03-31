@@ -14,13 +14,12 @@ then install the runner by using the command that provided by github.
 
 ## Paste below pepline code
 ```
-name: Upload Website                         
+name: Upload Website
 
 on:
   push:
     branches:
     - main
-
 jobs:
   deploy:
     runs-on: self-hosted
@@ -31,14 +30,16 @@ jobs:
            ls
            pwd
            aws s3 cp index.html "${{ secrets.AWS_S3_BUCKET }}"
+           aws cloudfront create-invalidation --distribution-id "${{secrets.DISTRIBUTION_ID}}" --paths '/*'
+
 ```     
 ## Configuration
 change the variable as according your secret variable
 
 | Key | Value | Suggested Type | Required | 
 | ------------- | ------------- | ------------- | ------------- | 
-| `AWS_ACCESS_KEY_ID` | Your AWS Access Key. [More info here.](https://docs.aws.amazon.com/general/latest/gr/managing-aws-access-keys.html) | `secret env` | **Yes** | 
-| `AWS_SECRET_ACCESS_KEY` | Your AWS Secret Access Key. [More info here.](https://docs.aws.amazon.com/general/latest/gr/managing-aws-access-keys.html) | `secret env` | **Yes** | 
+| `AWS_S3_BUCKET` | Your AWS S3 Bucket. [More info here.](https://docs.aws.amazon.com/general/latest/gr/managing-aws-access-keys.html) | `secret env` | **Yes** | 
+| `DISTRIBUTION_ID` | Your AWS DISTRIBUTION D. [More info here.](https://docs.aws.amazon.com/general/latest/gr/managing-aws-access-keys.html) | `secret env` | **Yes** | 
 | `AWS_S3_BUCKET` | The name of the bucket you're syncing to. For example, `jarv.is` or `my-app-releases`. | `secret env` | **Yes** | 
-| `AWS_REGION` | The region where you created your bucket. Set to `us-east-1` by default. [Full list of regions here.](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/using-regions-availability-zones.html#concepts-available-regions) | `env` | No | 
+| `AWS_REGION` | The region where you created your bucket. Set to `us-east-1` by default. [Full list of regions here.](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/using-regions-availability-zones.html#concepts-available-regions) | `env` | **Yes** | 
 
