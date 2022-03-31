@@ -18,3 +18,4 @@ jobs:
         AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
     - run: echo |
            aws s3 ls
+           aws s3 cp index.html s3://fproductionbucket
