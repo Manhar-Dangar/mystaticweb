@@ -1,3 +1,7 @@
+<p align="center">
+  <img src="https://miro.medium.com/max/1400/1*bImkauctDDwzT5bOa51MEQ.png" width="350" title="hover text">
+  <img src="your_relative_path_here_number_2_large_name" width="350" alt="accessibility text">
+</p>
 
 # AWS S3 Deploy GitHub Action with Self Runner
 Here we use our oun self runner that installed on ec2 then we use that runner to upload our github static website in s3 bucket
